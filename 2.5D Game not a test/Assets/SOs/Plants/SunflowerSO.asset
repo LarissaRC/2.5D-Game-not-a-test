@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8f46dbb4ae655964582c80b3e2562854, type: 3}
+  m_Name: SunflowerSO
+  m_EditorClassIdentifier: 
+  plantName: Gira-sol
+  plantStages:
+  - {fileID: 1903384415, guid: 46b570f3efb6f0e41a3ef3ebeb7a24aa, type: 3}
+  - {fileID: -85207864, guid: 46b570f3efb6f0e41a3ef3ebeb7a24aa, type: 3}
+  - {fileID: 2133804321, guid: 46b570f3efb6f0e41a3ef3ebeb7a24aa, type: 3}
+  minSeeds: 2
+  maxSeeds: 5
