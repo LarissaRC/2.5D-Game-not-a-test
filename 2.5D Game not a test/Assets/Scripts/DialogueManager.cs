@@ -11,6 +11,10 @@ public class DialogueManager : MonoBehaviour
     [SerializeField] private TextMeshProUGUI messageText;
     [SerializeField] private GameObject dialogueBox;
 
+    [SerializeField] private GameObject nextButton;
+    [SerializeField] private GameObject optionOneButton;
+    [SerializeField] private GameObject optionTwoButton;
+
     private Message[] currentMessages;
     private int activeMessage = 0;
     public static bool isActive = false;
@@ -46,6 +50,7 @@ public class DialogueManager : MonoBehaviour
 
     public void NextMessage() {
         if(!isTyping) {
+            HideNextButton();
             activeMessage++;
             if(activeMessage < currentMessages.Length) {
                 DisplayMessage();
@@ -56,6 +61,7 @@ public class DialogueManager : MonoBehaviour
         } else {
             StopCoroutine(currentTypingCoroutine);
             UpdateMessageText(fullText);
+            ShowNextButton();
             isTyping = false;
         }
         
@@ -72,5 +78,14 @@ public class DialogueManager : MonoBehaviour
             yield return new WaitForSeconds(typingSpeed);
         }
         isTyping = false;
+        ShowNextButton();
+    }
+
+    private void ShowNextButton() {
+        nextButton.SetActive(true);
+    }
+
+    private void HideNextButton() {
+        nextButton.SetActive(false);
     }
 }
