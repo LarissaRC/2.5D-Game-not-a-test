@@ -15,7 +15,7 @@ public class DialogueManager : MonoBehaviour
     [SerializeField] private GameObject optionOneButton;
     [SerializeField] private GameObject optionTwoButton;
 
-    private Message[] currentMessages;
+    private string[] currentMessages;
     private int activeMessage = 0;
     public static bool isActive = false;
 
@@ -25,8 +25,10 @@ public class DialogueManager : MonoBehaviour
     private bool isTyping = false;
     private Coroutine currentTypingCoroutine;
 
-    public void OpenDialogue(Message[] messages) {
-        currentMessages = messages;
+    public void OpenDialogue(DialogueSO dialogue) {
+        currentMessages = dialogue.dialogueTexts;
+        actorNameText.text = dialogue.actorName;
+        actorProfile.sprite = dialogue.actorProfile;
         activeMessage = 0;
         isActive = true;
         dialogueBox.SetActive(true);
@@ -35,11 +37,11 @@ public class DialogueManager : MonoBehaviour
     }
 
     private void DisplayMessage() {
-        Message messageToDisplay = currentMessages[activeMessage];
-        actorNameText.text = messageToDisplay.actorName;
-        actorProfile.sprite = messageToDisplay.actorProfile;
+        print(currentMessages);
+        string messageToDisplay = currentMessages[activeMessage];
+        print("A");
         
-        fullText = messageToDisplay.message;
+        fullText = messageToDisplay;
 
         currentTypingCoroutine = StartCoroutine(TypeText());
     }
@@ -69,10 +71,12 @@ public class DialogueManager : MonoBehaviour
 
     IEnumerator TypeText()
     {
+        print("B");
         isTyping = true;
         partialText = "";
         foreach (char letter in fullText)
         {
+            print("C");
             partialText += letter;
             UpdateMessageText(partialText);
             yield return new WaitForSeconds(typingSpeed);

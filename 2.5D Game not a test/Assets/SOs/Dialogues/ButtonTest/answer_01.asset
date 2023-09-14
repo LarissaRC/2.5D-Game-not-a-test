@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4de00d70072257b4fba78da93b15128b, type: 3}
+  m_Name: answer_01
+  m_EditorClassIdentifier: 
+  dialogueTexts:
+  - Oh no...
+  playerAnswer: Amo queijo <3
+  actorName: Queijo
+  actorProfile: {fileID: -1826101765, guid: 7e73a69ac65bbaf43835735da9135dc8, type: 3}
+  isLastDialogue: 0
+  answers:
+  - {fileID: 11400000, guid: 9022b1c62f738464e91400b4f6ea4b74, type: 2}

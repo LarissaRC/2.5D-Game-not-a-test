@@ -4694,7 +4694,7 @@ GameObject:
   - component: {fileID: 1141062243}
   - component: {fileID: 1141062242}
   - component: {fileID: 1141062241}
-  - component: {fileID: 1141062244}
+  - component: {fileID: 1141062245}
   m_Layer: 5
   m_Name: ShowDialogueBtn
   m_TagString: Untagged
@@ -4767,9 +4767,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1141062244}
-        m_TargetAssemblyTypeName: DialogueTrigger, Assembly-CSharp
-        m_MethodName: StartDialogue
+      - m_Target: {fileID: 1141062245}
+        m_TargetAssemblyTypeName: DialogueInteractable, Assembly-CSharp
+        m_MethodName: Interact
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -4817,7 +4817,7 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1141062239}
   m_CullTransparentMesh: 1
---- !u!114 &1141062244
+--- !u!114 &1141062245
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -4826,23 +4826,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1141062239}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 77e7114c4252e2b428f5a74d77cd5fc8, type: 3}
+  m_Script: {fileID: 11500000, guid: c04edcd10f93542439b64d644906a1e2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  messages:
-  - actorName: Queijo
-    actorProfile: {fileID: -1826101765, guid: 7e73a69ac65bbaf43835735da9135dc8, type: 3}
-    message: "Ol\xE1, eu sou um queijo. Tudo bem com voc\xEA?"
-  - actorName: Queijo
-    actorProfile: {fileID: -1826101765, guid: 7e73a69ac65bbaf43835735da9135dc8, type: 3}
-    message: "Bom, fico feliz que voc\xEA seja um gato e n\xE3o um rato, se n\xE3o
-      eu estaria em apuros com certeza, pois sou um queijo muito delicioso e apetitoso
-      hehe... Perai voc\xEA gosta de queijo?"
-  - actorName: Queijo
-    actorProfile: {fileID: -1826101765, guid: 7e73a69ac65bbaf43835735da9135dc8, type: 3}
-    message: Oh no...
-  optionOne: Amo queijo <3
-  optionTwo: Bleh, eca
+  dialogue: {fileID: 11400000, guid: 9022b1c62f738464e91400b4f6ea4b74, type: 2}
 --- !u!1001 &1142833077
 PrefabInstance:
   m_ObjectHideFlags: 0

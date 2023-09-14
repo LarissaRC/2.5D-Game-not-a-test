@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4de00d70072257b4fba78da93b15128b, type: 3}
+  m_Name: initial_dialogue
+  m_EditorClassIdentifier: 
+  dialogueTexts:
+  - "Ol\xE1, eu sou um queijo!"
+  - "Que bom que voc\xEA \xE9 um gato e n\xE3o um rato, pois sou um queijo muito
+    apetitoso e saboroso hehe... Espera a\xED, voc\xEA gosta de queijo?"
+  playerAnswer: "Voltar para o in\xEDcio"
+  actorName: Queijo
+  actorProfile: {fileID: -1826101765, guid: 7e73a69ac65bbaf43835735da9135dc8, type: 3}
+  isLastDialogue: 0
+  answers:
+  - {fileID: 11400000, guid: d0c8e59c849a0bf42bdcff9341cdd087, type: 2}
+  - {fileID: 11400000, guid: 68977cf7497fe1e42958a13bff26b845, type: 2}
