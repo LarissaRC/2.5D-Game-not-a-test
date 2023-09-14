@@ -29,11 +29,6 @@ public class DialogueManager : MonoBehaviour
 
     public void SetDialogue(DialogueSO dialogue) {
 
-        if(dialogue.isLastDialogue) {
-            dialogueBox.SetActive(false);
-            return;
-        }
-
         this.dialogue = dialogue;
 
         currentMessages = dialogue.dialogueTexts;
@@ -83,20 +78,22 @@ public class DialogueManager : MonoBehaviour
 
     public void NextMessage() {
         if(!isTyping) {
-            HideNextButton();
-            HideAnswers();
-            activeMessage++;
-            if(activeMessage < currentMessages.Length) {
-                DisplayMessage();
-            } else {
+            if(dialogue.answers.Length == 0){
                 isActive = false;
                 dialogueBox.SetActive(false);
+                return;
+            }
+            activeMessage++;
+            if(activeMessage < currentMessages.Length) {
+                HideNextButton();
+                HideAnswers();
+                DisplayMessage();
             }
         } else {
             StopCoroutine(currentTypingCoroutine);
             UpdateMessageText(fullText);
 
-            if(activeMessage == currentMessages.Length - 1) {
+            if(activeMessage == currentMessages.Length - 1 && dialogue.answers.Length != 0) {
                 DisplayAnswers();
             } else {
                 ShowNextButton();
@@ -119,7 +116,7 @@ public class DialogueManager : MonoBehaviour
         }
         isTyping = false;
         
-        if(activeMessage == currentMessages.Length - 1) {
+        if(activeMessage == currentMessages.Length - 1 && dialogue.answers.Length != 0) {
             DisplayAnswers();
         } else {
             ShowNextButton();

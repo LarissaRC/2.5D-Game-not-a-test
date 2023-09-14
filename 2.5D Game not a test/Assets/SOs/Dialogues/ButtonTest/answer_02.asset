@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: answer_02
   m_EditorClassIdentifier: 
   dialogueTexts:
-  - Ofa, ainda bem. Nesse caso, prazer em lhe conhecer. Espero que possamos ser bons
+  - Ufa, ainda bem. Nesse caso, prazer em lhe conhecer. Espero que possamos ser bons
     amigos!
   playerAnswer: Bleh, eca
   actorName: Queijo

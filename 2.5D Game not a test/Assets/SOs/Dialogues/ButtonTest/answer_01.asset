@@ -18,5 +18,4 @@ MonoBehaviour:
   actorName: Queijo
   actorProfile: {fileID: -1826101765, guid: 7e73a69ac65bbaf43835735da9135dc8, type: 3}
   isLastDialogue: 0
-  answers:
-  - {fileID: 11400000, guid: 9022b1c62f738464e91400b4f6ea4b74, type: 2}
+  answers: []
