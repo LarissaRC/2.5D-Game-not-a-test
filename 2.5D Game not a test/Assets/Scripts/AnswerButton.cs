@@ -1,13 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
-public class DialogueInteractable : MonoBehaviour
+public class AnswerButton : MonoBehaviour
 {
-    [SerializeField] private DialogueSO dialogue;
+    public DialogueSO dialogue;
+    public TextMeshProUGUI answerText;
 
-    public void Interact() {
+    public void SetDialogue() {
         FindObjectOfType<DialogueManager>().SetDialogue(dialogue);
     }
-
 }
